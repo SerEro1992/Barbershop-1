@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Каталог</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="page__header header">
+        <div class="container">
+          <nav class="header__nav">
+            <a href="index.html" class="header__logo">
+              <img
+                class="logo__catalog"
+                src="@img/logo_catalog.svg"
+                alt="Логотип барбершопа"
+                width="140"
+                height="18"
+              />
+            </a>
+            <ul class="nav-page__list">
+              <li class="nav__item">
+                <a href="about.html" class="nav__link">О нас</a>
+              </li>
+              <li class="nav__item">
+                <a href="catalog.html" class="nav__link nav__link-current"
+                  >Каталог</a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="faq.html" class="nav__link">Частые вопросы</a>
+              </li>
+            </ul>
+            <ul class="nav-user__list nav-page__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  <svg
+                    class="nav__icon"
+                    aria-hidden="true"
+                    focusable="false"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M11 6.5a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm-.67 5.25a6.5 6.5 0 1 1 1.41-1.41l3.97 3.95-1.42 1.42-3.96-3.96Z"
+                    />
+                  </svg>
+                  <span class="visually-hidden">Поиск</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">
+                  <svg
+                    class="nav__icon"
+                    aria-hidden="true"
+                    focusable="false"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.1 6 3.57.9l.08-.9h8.67l.1.9.48 5.1H15.63l-.14 1.12-1 8-.1.88H1.61l-.11-.88-1-8L.37 6H3.1Zm2 0h5.8l-.38-4H5.48L5.1 6Zm-1.72 8-.75-6h10.74l-.75 6H3.38ZM8.5 9.5v3h2v-3h-2Zm-3 3v-3h2v3h-2Z"
+                    />
+                  </svg>
+                  <span class="visually-hidden">Корзина</span>
+                </a>
+
+                <div class="popover popover-cart">
+                  <!--.popover-open-->
+                  <button class="popover__close-button button button-light">
+                    2
+                    <span class="visually-hidden">Закрыть</span>
+                  </button>
+                  <div class="popover__content">
+                    <h2 class="popover__title">Корзина</h2>
+                    <ul class="card__items">
+                      <li class="card__item">
+                        <p class="card-item__title">Стрижка машинкой</p>
+                        <p class="card-item__price">800 ₽</p>
+                        <button type="button" class="card-item__button button">
+                          <svg
+                            width="16"
+                            height="16"
+                            fill="#fff"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M3.42 1l.283-.496L3.991 0H12.01l.288.504.283.496h3.049l-.136 1.12-1.577 13-.107.88H2.191l-.107-.88-1.577-13L.371 1H3.42zm.543 13L2.629 3H13.37l-1.334 11H3.963zm5.04-9.071l-.5 7 1.995.142.5-7-1.995-.142zm-3.5 7.142l-.5-7 1.994-.142.5 7-1.994.142z"
+                            />
+                          </svg>
+                          <span class="visually-hidden"
+                            >Удалить из корзины</span
+                          >
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link nav__link-input button-input">
+                  <svg
+                    class="nav__icon"
+                    aria-hidden="true"
+                    focusable="false"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm0 2a6 6 0 0 0-6 6h12a6 6 0 0 0-6-6Z"
+                    />
+                  </svg>
+                  <span class="visually-hidden">Пользователь</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main class="main__inner">
+        <div class="container">
+          <header class="inner-header">
+            <h1 class="inner-header__title">Каталог</h1>
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item">
+                <a
+                  href="index.html"
+                  class="breadcrumbs__link breadcrumbs__link-main"
+                  >Главная</a
+                >
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link">Каталог</a>
+              </li>
+            </ul>
+          </header>
+
+          <section class="catalog-products">
+            <h2 class="visually-hidden">Список товаров с фильтрами</h2>
+
+            <form
+              class="catalog-products__filter"
+              action="https://echo.htmlacademy.ru/"
+              method="get"
+            >
+              <fieldset class="filter__group">
+                <legend class="filter__title-cost">Цена</legend>
+                <div class="range">
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 42px; right: 42px">
+                      <button class="range-toggle toggle-min" type="button">
+                        <span class="visually-hidden"
+                          >Изменить минимальную цену</span
+                        >
+                      </button>
+                      <button class="range-toggle toggle-max" type="button">
+                        <span class="visually-hidden"
+                          >Изменить максимальную цену</span
+                        >
+                      </button>
+                    </div>
+                  </div>
+                  <div class="range-wrapper-input">
+                    <label class="filter__label">
+                      от
+                      <input
+                        type="number"
+                        class="filter__input"
+                        name="min-price"
+                        value="50"
+                      />
+                      ₽
+                    </label>
+                    <label class="filter__label">
+                      до
+                      <input
+                        type="number"
+                        class="filter__input"
+                        name="max-price"
+                        value="1500"
+                        style="width: 39px"
+                      />
+                      ₽
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="filter__group">
+                <legend class="filter__title">Производители</legend>
+                <ul class="filter__list">
+                  <li class="filter__item">
+                    <label class="control">
+                      <input
+                        class="control__input visually-hidden"
+                        type="checkbox"
+                        name="bed-head-for-men"
+                      />
+                      <span class="control__mark"></span>
+                      <span class="control__label">Bed Head for Men</span>
+                    </label>
+                  </li>
+                  <li class="filter__item">
+                    <label class="control">
+                      <input
+                        class="control__input visually-hidden"
+                        type="checkbox"
+                        checked
+                        name="Homme-Deep-Cleansing-Cool"
+                      />
+                      <span class="control__mark"></span>
+                      <span class="control__label"
+                        >Homme Deep Cleansing Cool</span
+                      >
+                    </label>
+                  </li>
+                  <li class="filter__item">
+                    <label class="control">
+                      <input
+                        class="control__input visually-hidden"
+                        type="checkbox"
+                        checked
+                        name="So-Intense"
+                      />
+                      <span class="control__mark"></span>
+                      <span class="control__label">So Intense</span>
+                    </label>
+                  </li>
+                  <li class="filter__item">
+                    <label class="control">
+                      <input
+                        class="control__input visually-hidden"
+                        type="checkbox"
+                        name="Sprekenhus"
+                      />
+                      <span class="control__mark"></span>
+                      <span class="control__label">Sprekenhus</span>
+                    </label>
+                  </li>
+                  <li class="filter__item">
+                    <label class="control">
+                      <input
+                        class="control__input visually-hidden"
+                        type="checkbox"
+                        name="Firm-Storе"
+                      />
+                      <span class="control__mark"></span>
+                      <span class="control__label">Firm Storе</span>
+                    </label>
+                  </li>
+                  <li class="filter__item">
+                    <label class="control">
+                      <input
+                        class="control__input visually-hidden"
+                        type="checkbox"
+                        checked
+                        name="Winter-Body"
+                      />
+                      <span class="control__mark"></span>
+                      <span class="control__label">Winter Body</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+
+              <fieldset class="filter__group">
+                <legend class="filter__title">Группы товаров</legend>
+                <ul class="filter__list">
+                  <li class="filter__item">
+                    <label class="control">
+                      <input
+                        class="control__input visually-hidden"
+                        type="radio"
+                        name="product-group"
+                        value="shaving-supplies"
+                      />
+                      <span class="control__mark"></span>
+                      <span class="control__label"
+                        >Бритвенные принадлежности</span
+                      >
+                    </label>
+                  </li>
+                  <li class="filter__item">
+                    <label class="control">
+                      <input
+                        class="control__input visually-hidden"
+                        type="radio"
+                        name="product-group"
+                        value="care products"
+                      />
+                      <span class="control__mark"></span>
+                      <span class="control__label">Средства для ухода</span>
+                    </label>
+                  </li>
+                  <li class="filter__item">
+                    <label class="control">
+                      <input
+                        class="control__input visually-hidden"
+                        checked
+                        type="radio"
+                        name="product-group"
+                        value="accessories"
+                      />
+                      <span class="control__mark"></span>
+                      <span class="control__label">Аксессуары</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <button class="button" type="submit">Показать</button>
+            </form>
+
+            <div class="catalog-container">
+              <div class="sorting">
+                <form class="sorting-type">
+                  <div class="sorting-select">
+                    <label class="visually-hidden" for="sorting"
+                      >Сортировка</label
+                    >
+                    <select name="sorting" id="sorting" class="select-control">
+                      <option value="popular">Сначала популярные</option>
+                      <option value="cheap">Сначала дешевые</option>
+                      <option value="expensive">Сначала дорогие</option>
+                    </select>
+                  </div>
+
+                  <button class="visually-hidden" type="submit">
+                    Отсортировать продукты
+                  </button>
+                </form>
+
+                <a
+                  href="#"
+                  class="button card-grid-toggle card-grid-toggle-current"
+                >
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M2 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-2 8a2 2 0 1 1 4 0 2 2 0 0 1-4 0ZM7 1a1 1 0 0 0 0 2h8a1 1 0 1 0 0-2H7ZM6 8a1 1 0 0 1 1-1h8a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1Zm1 5a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2H7Z"
+                    />
+                  </svg>
+                  <span class="visually-hidden">Показать список</span>
+                </a>
+
+                <a href="#" class="button card-grid-toggle">
+                  <svg
+                    class="toggle-icon"
+                    aria-hidden="true"
+                    focusable="false"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0 2a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm10 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM0 8a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm10 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0Zm2 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm-8 6a2 2 0 1 0-4 0 2 2 0 0 0 4 0Zm2 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm10 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z"
+                    />
+                  </svg>
+                  <span class="visually-hidden">Показать карточки</span>
+                </a>
+              </div>
+
+              <div class="product-card">
+                <ul class="product__list">
+                  <li class="product-card__list">
+                    <a class="product-card__link" href="product.html">
+                      <img
+                        src="@img/catalog/catalog-1.jpg"
+                        alt="Шампунь для мужчин Brews Daily"
+                        class="product-card__img"
+                      />
+                    </a>
+                    <a class="product-card__title-link" href="product.html">
+                      <h3 class="product-card__title">
+                        Шампунь для мужчин Brews Daily
+                      </h3>
+                    </a>
+                    <span class="product-card__price">744 ₽</span>
+                    <a href="" class="product-card__button button">Купить</a>
+                  </li>
+                  <li class="product-card__list">
+                    <a class="product-card__link" href="product.html">
+                      <img
+                        src="@img/catalog/catalog-2.jpg"
+                        alt="Syoss шампунь Men Power & Strength"
+                        class="product-card__img"
+                    /></a>
+                    <a class="product-card__title-link" href="product.html">
+                      <h3 class="product-card__title">
+                        Syoss шампунь Men Power & Strength
+                      </h3>
+                    </a>
+                    <span class="product-card__price">160 ₽</span>
+                    <a href="" class="product-card__button button">Купить</a>
+                  </li>
+                  <li class="product-card__list">
+                    <a class="product-card__link" href="product.html">
+                      <img
+                        src="@img/catalog/catalog-3.jpg"
+                        alt="Schauma шампунь для мужчин «Сила и объём с хмелем»"
+                        class="product-card__img"
+                    /></a>
+                    <a class="product-card__title-link" href="product.html">
+                      <h3 class="product-card__title">
+                        Schauma шампунь для мужчин «Сила и объём с хмелем»
+                      </h3>
+                    </a>
+                    <span class="product-card__price">94 ₽</span>
+                    <a href="" class="product-card__button button">Купить</a>
+                  </li>
+                  <li class="product-card__list">
+                    <a class="product-card__link" href="product.html">
+                      <img
+                        src="@img/catalog/catalog-4.jpg"
+                        alt="Nivea Men шампунь-уход «Экстремальная свежесть с ментолом»"
+                        class="product-card__img"
+                    /></a>
+                    <a class="product-card__title-link" href="product.html">
+                      <h3 class="product-card__title">
+                        Nivea Men шампунь-уход «Экстремальная свежесть с
+                        ментолом»
+                      </h3>
+                    </a>
+                    <span class="product-card__price">173 ₽</span>
+                    <a href="" class="product-card__button button">Купить</a>
+                  </li>
+                  <li class="product-card__list">
+                    <a class="product-card__link" href="product.html">
+                      <img
+                        src="@img/catalog/catalog-5.jpg"
+                        alt="Шампунь Amplifier Thickening"
+                        class="product-card__img"
+                    /></a>
+                    <a class="product-card__title-link" href="product.html">
+                      <h3 class="product-card__title">
+                        Шампунь Amplifier Thickening
+                      </h3>
+                    </a>
+                    <span class="product-card__price">441 ₽</span>
+                    <a href="" class="product-card__button button">Купить</a>
+                  </li>
+                  <li class="product-card__list">
+                    <a class="product-card__link" href="product.html">
+                      <img
+                        src="@img/catalog/catalog-6.jpg"
+                        alt="American Crew шампунь Anti-Dandruff"
+                        class="product-card__img"
+                      />
+                    </a>
+                    <a class="product-card__title-link" href="product.html">
+                      <h3 class="product-card__title">
+                        American Crew шампунь Anti-Dandruff
+                      </h3>
+                    </a>
+                    <span class="product-card__price">904 ₽</span>
+                    <a href="" class="product-card__button button">Купить</a>
+                  </li>
+                </ul>
+
+                <div class="pagination-container">
+                  <ul class="pagination">
+                    <li class="pagination__item">
+                      <a
+                        href=""
+                        class="pagination__link pagination__prev pagination__disabled"
+                      >
+                        <span class="visually-hidden">Предыдущая страница</span>
+                      </a>
+                    </li>
+                    <li class="pagination__item">
+                      <a href="" class="pagination__link pagination__current"
+                        >1</a
+                      >
+                    </li>
+                    <li class="pagination__item">
+                      <a href="" class="pagination__link">2</a>
+                    </li>
+                    <li class="pagination__item">
+                      <a href="" class="pagination__link">3</a>
+                    </li>
+                    <li class="pagination__item">
+                      <a href="" class="pagination__link">4</a>
+                    </li>
+                    <li class="pagination__item">
+                      <a href="" class="pagination__link">5</a>
+                    </li>
+                    <li class="pagination__item">
+                      <a href="" class="pagination__link pagination__next">
+                        <span class="visually-hidden"
+                          >Следующая страница</span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                  <button type="button" class="pagination__button button">
+                    Показать еще
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-container">
+          <section class="footer__contact">
+            <h2 class="visually-hidden">Контакты</h2>
+            <img
+              src="@img/footer-logo.svg"
+              alt="Логотип барбершоп «Бородинский»"
+              class="footer__logo"
+            />
+
+            <address class="contact__address">
+              <p class="contact__text">
+                Санкт-Петербург, набережная реки Карповки, 5, литера П.
+              </p>
+              <a href="tel:88005558628" class="contact__phone"
+                >+7 800 555-86-28</a
+              >
+            </address>
+            <a
+              href="https://www.google.com/maps/place/%D0%BD%D0%B0%D0%B1.+P%D0%B5%D0%BA%D0%B8+%D0%9A%D0%B0%D1%80%D0%BF%D0%BE%D0%B2%D0%BA%D0%B8,+5+%D0%BA%D0%BE%D1%80%D0%BF%D1%83%D1%81+%D0%9F,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+197022/@59.9683447,30.3151923,17z/data=!3m1!4b1!4m5!3m4!1s0x4696315bc4e8ce61:0x74d4f0cbfe1fd995!8m2!3d59.968342!4d30.317381"
+              class="contact__map-link"
+              target="_blank"
+              >Как нас найти?</a
+            >
+          </section>
+
+          <section class="footer__newsletter">
+            <h2 class="newsletter__title">Получайте лучшие предложения</h2>
+            <form
+              class="newsletter__form"
+              action="https://echo.htmlacademy.ru/"
+              method="post"
+            >
+              <p class="newsletter__email">
+                <label for="newsletter__email" class="visually-hidden"></label>
+                <input
+                  type="email"
+                  class="field"
+                  placeholder="question@htmlacademy.ru"
+                  name="newsletter__email"
+                  id="newsletter__email"
+                />
+              </p>
+
+              <button class="button newsletter__button" type="submit">
+                <span class="visually-hidden">Отправить</span>
+              </button>
+            </form>
+          </section>
+
+          <section class="footer__social">
+            <h2 class="social__title">Давайте дружить</h2>
+            <ul class="social__list">
+              <li class="social__item">
+                <a
+                  class="social__link twitter"
+                  href="https://twitter.com/htmlacademy_ru"
+                  target="_blank"
+                >
+                  <span class="visually-hidden">Твиттер</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  class="social__link vkontakte"
+                  href="https://vk.com/htmlacademy"
+                  target="_blank"
+                >
+                  <span class="visually-hidden">Вконтакте</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  class="social__link instagram"
+                  href="https://www.facebook.com/htmlacademy"
+                  target="_blank"
+                >
+                  <span class="visually-hidden">Инстаграм</span>
+                </a>
+              </li>
+            </ul>
+            <p class="social__text">
+              Сделано в
+              <a
+                class="html__link"
+                href="https://htmlacademy.ru/"
+                target="_blank"
+                >html-academy</a
+              >
+            </p>
+          </section>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
